@@ -4,7 +4,6 @@
 
 ### Installation
 
-```bash
 ```yml
       - name: Generate PDFs
         uses: opf/md-to-pdf-upload-action@v1
@@ -56,7 +55,7 @@ jobs:
 
 If you don't use the repository root folder, you need to configure the locations to the styling folder and the yml file in your action config. 
 
-```yaml
+```yml
         uses: opf/md-to-pdf-upload-action@v1
         with:
           config: ".github/md-to-pdf-example-path/md-to-pdf.config.yml" # relative to the root of the repository
