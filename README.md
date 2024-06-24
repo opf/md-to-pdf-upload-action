@@ -5,19 +5,19 @@
 ### Installation
 
 ```yml
-      - name: Generate PDFs
-        uses: opf/md-to-pdf-upload-action@v1
-        with:
-          # md-to-pdf condfig file, relative to the root of the repository
-          config: "./md-to-pdf.config.yml" 
-          # md-to-pdf styling folder, relative to the root of the repository
-          stylings: "./styling/" 
-          # the nextcloud username for the upload
-          nextcloud-user: "example-user"
-          # the nextcloud App key for the uploading user
-          nextcloud-app-access-key: "the secret app key; do not place here, use github secrets"
-          # the root folder on the nextcloud server where the files should be uploaded
-          nextcloud-upload-path: "https://nextcloud.example.com/remote.php/dav/files/pdf-bot-user/some-example-path/upload-folder/"
+- name: Generate PDFs
+  uses: opf/md-to-pdf-upload-action@v1
+  with:
+    # md-to-pdf condfig file, relative to the root of the repository
+    config: "./md-to-pdf.config.yml" 
+    # md-to-pdf styling folder, relative to the root of the repository
+    stylings: "./styling/" 
+    # the nextcloud username for the upload
+    nextcloud-user: "example-user"
+    # the nextcloud App key for the uploading user
+    nextcloud-app-access-key: "the secret app key; do not place here, use github secrets"
+    # the root folder on the nextcloud server where the files should be uploaded
+    nextcloud-upload-path: "https://nextcloud.example.com/remote.php/dav/files/pdf-bot-user/some-example-path/upload-folder/"
 ```
 
 ### Full example
@@ -56,10 +56,10 @@ jobs:
 If you don't use the repository root folder, you need to configure the locations to the styling folder and the yml file in your action config. 
 
 ```yml
-        uses: opf/md-to-pdf-upload-action@v1
-        with:
-          config: ".github/md-to-pdf-example-path/md-to-pdf.config.yml" # relative to the root of the repository
-          stylings: ".github/md-to-pdf-example-path/styling/" # relative to the root of the repository
+  uses: opf/md-to-pdf-upload-action@v1
+  with:
+    config: ".github/md-to-pdf-example-path/md-to-pdf.config.yml" # relative to the root of the repository
+    stylings: ".github/md-to-pdf-example-path/styling/" # relative to the root of the repository
 ```
 
 > [!NOTE]
