@@ -8,7 +8,7 @@
 - name: Generate PDFs
   uses: opf/md-to-pdf-upload-action@v1
   with:
-    # md-to-pdf condfig file, relative to the root of the repository
+    # md-to-pdf config file, relative to the root of the repository
     config: "./md-to-pdf.config.yml" 
     # md-to-pdf styling folder, relative to the root of the repository
     stylings: "./styling/" 
