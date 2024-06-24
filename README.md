@@ -13,7 +13,7 @@
     # md-to-pdf styling folder, relative to the root of the repository
     stylings: "./styling/" 
     # the nextcloud username for the upload
-    nextcloud-user: "example-user"
+    nextcloud-user: "pdf-bot-user"
     # the nextcloud App key for the uploading user
     nextcloud-app-access-key: "the secret app key; do not place here, use github secrets"
     # the root folder on the nextcloud server where the files should be uploaded
