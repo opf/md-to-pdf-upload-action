@@ -48,7 +48,7 @@ class Uploader
     puts "Uploading"
     puts "   from: #{filename}"
     puts "   to: #{destination}"
-    uri = URI.parse(URI.escape(destination))
+    uri = URI.parse(CGI.escape(destination))
     header = { "Content-Type": MIMETYPE }
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
