@@ -44,11 +44,12 @@ class Uploader
 
   def upload(entry)
     filename = File.join(@options[:destination_root], entry)
-    destination = "#{@options[:nc_path]}#{entry}"
+    encoded_entry = entry.split('/').map{ |part| CGI.escape(part) }.join('/')
+    destination = "#{@options[:nc_path]}#{encoded_entry}"
     puts "Uploading"
     puts "   from: #{filename}"
     puts "   to: #{destination}"
-    uri = URI.parse(CGI.escape(destination))
+    uri = URI.parse(destination)
     header = { "Content-Type": MIMETYPE }
     http = Net::HTTP.new(uri.host, uri.port)
     http.use_ssl = true
