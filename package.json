@@ -1,0 +1,6 @@
+{
+  "name": "md-to-pdf-upload-action-mermaidjs",
+  "dependencies": {
+    "@mermaid-js/mermaid-cli": "10.9.1"
+  }
+}
