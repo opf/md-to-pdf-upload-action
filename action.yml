@@ -35,7 +35,7 @@ runs:
     - uses: actions/setup-node@v4
       with:
         node-version: 20.x
-        cache: 'npm'
+        cache-dependency-path: "${{ github.action_path }}/package-lock.json"
 
     - run: |
         npm install
